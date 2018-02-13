@@ -18,7 +18,7 @@ def extract_json(json_line):
     
     return '%s\t%s' % (name, age), flag
 
-def process_file(prefix, input_dir='~/srv/runme', output_dir = '~/srv/runme'):
+def process_file(prefix, input_dir='home/ec2-user/srv/runme', output_dir = 'home/ec2-user/srv/runme'):
     output_file = '%s/%s.txt' % (output_dir, prefix)
     if os.path.exists(output_file): os.remove(output_file)
     
@@ -46,4 +46,4 @@ def process_file(prefix, input_dir='~/srv/runme', output_dir = '~/srv/runme'):
 
 if __name__ == '__main__':
     prefix = sys.argv[1]
-    process_file(prefix, '~/srv/runme', '~/srv/runme')
+    process_file(prefix, 'home/ec2-user/srv/runme', 'home/ec2-user/srv/runme')
